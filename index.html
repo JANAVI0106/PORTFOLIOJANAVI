@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janavi's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Profile Picture - Right Top Corner */
+        .profile-picture {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 80px; /* Changed size to 80px */
+            height: 80px; /* Changed size to 80px */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        #hero button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #hero button:hover {
+            background-color: #1a6ba3;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .skill {
+            text-align: center;
+        }
+
+        .skill-bar {
+            background-color: #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            width: 200px;
+            margin: 10px auto;
+        }
+
+        .skill-level {
+            background-color: #3498db;
+            height: 20px;
+            animation: grow 2s ease;
+        }
+
+        @keyframes grow {
+            0% { width: 0; }
+            100% { width: inherit; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="./janaviprofile.jpg" alt="Profile Picture" class="profile-picture">
+    </header>
+
+    <section id="hero">
+        <h2>Hello </h2><br>
+        <h2>I'm  Janavi Sree Ramesh <br>
+            From Panimalar Engineering College <br>
+            An Upcoming Full Stack Developer !!<br></h2>
+        <p>Passionate about crafting digital solutions with creativity and technology.</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a Computer Engineering student with a strong passion for technology and software development. My expertise lies in programming, web development, and solving complex problems.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A brief description of the project showcasing my skills in web development.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>A brief description of the project demonstrating my abilities in Python programming.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; My Portfolio</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
